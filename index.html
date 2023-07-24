@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Feedback Survey Form</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1>Customer Feedback Survey Form</h1>
+                <form id="feedback-form">
+                    <div class="form-group">
+                        <label for="product-performance">How satisfied are you with the product's performance?</label>
+                        <select class="form-control" id="product-performance" name="product-performance">
+                            <option value="">Please select</option>
+                            <option value="very-satisfied">Very Satisfied</option>
+                            <option value="satisfied">Satisfied</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="unsatisfied">Unsatisfied</option>
+                            <option value="very-unsatisfied">Very Unsatisfied</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-durability">How satisfied are you with the product's durability?</label>
+                        <select class="form-control" id="product-durability" name="product-durability">
+                            <option value="">Please select</option>
+                            <option value="very-satisfied">Very Satisfied</option>
+                            <option value="satisfied">Satisfied</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="unsatisfied">Unsatisfied</option>
+                            <option value="very-unsatisfied">Very Unsatisfied</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-design">How satisfied are you with the product's design?</label>
+                        <select class="form-control" id="product-design" name="product-design">
+                            <option value="">Please select</option>
+                            <option value="very-satisfied">Very Satisfied</option>
+                            <option value="satisfied">Satisfied</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="unsatisfied">Unsatisfied</option>
+                            <option value="very-unsatisfied">Very Unsatisfied</option>
+                        </select>
+                    </div>
+	 			        <div class="form-group">
+                        <label for="product-performance">What product features are most important to you?</label>
+                        <select class="form-control" id="product-performance" name="product-performance">
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="very-satisfied">Very satisfied</option>
+                            <option value="satisfied">Satisfied</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="unsatisfied">Unsatisfied</option>
+                            <option value="very-unsatisfied">Very unsatisfied</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-durability">What is your budget or price range when considering a product purchase?</label>
+                        <select class="form-control" id="product-durability" name="product-durability">
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="very-satisfied">Very satisfied</option>
+                            <option value="satisfied">Satisfied</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="unsatisfied">Unsatisfied</option>
+                            <option value="very-unsatisfied">Very unsatisfied</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-design">What kind of design or aesthetic do you prefer in a product?</label>
+                        <select class="form-control" id="product-design" name="product-design">
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="very-satisfied">Very satisfied</option>
+                            <option value="satisfied">Satisfied</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="unsatisfied">Unsatisfied</option>
+                            <option value="very-unsatisfied">Very unsatisfied</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="specific-features">Are there any specific features or functionalities that you would like to see in our product?</label>
+                        <textarea class="form-control" id="specific-features" name="specific-features"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-quality">How important is product quality to you?</label>
+                        <select class="form-control" id="product-quality" name="product-quality">
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="very-satisfied">Very satisfied</option>
+                            <option value="satisfied">Satisfied</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="unsatisfied">Unsatisfied</option>
+                            <option value="very-unsatisfied">Very unsatisfied</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="similar-products">Have you used similar products before? If so, what did you like/dislike about them?</label>
+                        <textarea class="form-control" id="similar-products" name="similar-products"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="industry-context">Could you provide more context about the product and industry we are working in?</label>
+                        <textarea class="form-control" id="industry-context" name="industry-context"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-profiles">Do you have any target demographic or customer profiles that we should consider when asking these questions?</label>
+                        <textarea class="form-control" id="customer-profiles" name="customer-profiles"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="other-comments">Do you have any other comments or suggestions?</label>
+                        <textarea class="form-control" id="other-comments" name="other-comments" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <canvas id="feedback-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Chart.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.1.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <!-- Add custom JavaScript code -->
+    <script src="script.js"></script>
+</body>
+</html>
