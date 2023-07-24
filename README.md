@@ -6,6 +6,8 @@ Survey P.M. is a web application that allows users to submit feedback on a produ
 Installation
 To install Survey P.M., simply download the project files and open the index.html file in your web browser. You will also need to include the necessary external libraries, including Chart.min.js, jquery.min.js, and popper.min.js, which can be downloaded from their respective websites or included using CDN links.
 
+
+
 Usage
 To use Survey P.M., simply fill out the feedback form by selecting the appropriate answer for each question and clicking the "Submit" button. If all questions are answered, the feedback scores will be calculated and displayed in a chart below the form.
 
